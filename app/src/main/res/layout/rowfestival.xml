@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="24dp"
+        card_view:cardElevation="1dp"
+        card_view:cardBackgroundColor="#6874C4"
+        card_view:cardUseCompatPadding="false"
+        card_view:contentPadding="4dp"
+        android:layout_margin="4dp">
+
+    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp" card_view:srcCompat="@drawable/photo_background_2"
+                android:id="@+id/ivFest"
+                card_view:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                card_view:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                card_view:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="NombreFest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvNombreFest"
+                card_view:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp" android:layout_marginStart="20dp"
+                card_view:layout_constraintStart_toEndOf="@+id/ivFest" card_view:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp" android:layout_marginRight="20dp" android:textSize="24sp"
+                android:textStyle="bold" card_view:fontFamily="sans-serif-black"/>
+        <TextView
+                android:text="dd/mm/yyyy - dd/mm/yyyy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvFechaFest" android:layout_marginLeft="25dp" android:layout_marginStart="25dp"
+                card_view:layout_constraintStart_toEndOf="@+id/ivFest" card_view:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="25dp" android:layout_marginRight="25dp" android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvNombreFest" android:textSize="18sp"/>
+        <TextView
+                android:text="desde 00e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPrecioFest" android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                card_view:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="20dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvFechaFest" android:layout_marginBottom="16dp"
+                card_view:layout_constraintBottom_toBottomOf="parent" android:textSize="18sp"/>
+        <TextView
+                android:text="id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvIdFest"
+                android:textColor="#FFEB3B" android:textSize="18sp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="8dp" android:layout_marginEnd="8dp"
+                card_view:layout_constraintStart_toEndOf="@+id/tvNombreFest" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
+

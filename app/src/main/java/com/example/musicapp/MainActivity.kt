@@ -1,5 +1,6 @@
 package com.example.musicapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
@@ -13,8 +14,9 @@ import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.Menu
 import android.view.TextureView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import com.example.musicapp.adapter.FestivalAdapter
+import com.example.musicapp.model.Festivales
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import org.jetbrains.anko.alert
@@ -25,6 +27,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
    // private val text: TextView? = findViewById(R.id.tvPruebaFirebase)
    // private lateinit var database: DatabaseReference
+
+    private lateinit var adapter: FestivalAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,5 +97,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         alert("Trabajo Fin de Ciclo realizado por: Esther Huecas Pérez en el año 2019", "MusicApp"){
             yesButton {  }
         }.show()
+    }
+
+    fun onClickFestival(view: View){
+        startActivity(Intent(this, FestivalActivity::class.java))
+        //var festival = view.tag as Festivales
+        //val intent = Intent(this, FestivalActivity::class.java)
+        //intent.putExtra("festival", (view.tag as Festivales))
+        //startActivity(intent)
     }
 }

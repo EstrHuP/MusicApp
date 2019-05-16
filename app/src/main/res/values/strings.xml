@@ -9,7 +9,8 @@
 
     <string name="menu_logout">Logout</string>
     <string name="menu_info">Acerca de..</string>
-    <string name="main">¡Este verano no te quedes en casa!</string>
+    <string name="mainFestivales">¡Este verano no te quedes en casa!</string>
+    <string name="mainConciertos">¡Canta como nunca!</string>
 
     <string name="registrate">¿No tienes cuenta?</string>
 </resources>
