@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                                     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     card_view:cardCornerRadius="20dp"
+                                     card_view:cardElevation="1dp"
+                                     card_view:cardBackgroundColor="#B8D19C"
+                                     card_view:cardUseCompatPadding="false"
+                                     card_view:contentPadding="1dp"
+                                     android:layout_margin="5dp">
+
+    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content">
+
+        <TextView
+                android:text="NombreCon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvNombreCon" android:textSize="20sp"
+                android:textStyle="bold" card_view:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                card_view:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="#9C27B0" android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="dd/mm/yyyy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvFechaCon"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvNombreCon"
+                card_view:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" card_view:layout_constraintEnd_toStartOf="@+id/tvHorarioCon"
+                android:layout_marginEnd="16dp" android:layout_marginRight="16dp"/>
+        <TextView
+                android:text="00:00 horas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvHorarioCon"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp" card_view:layout_constraintTop_toBottomOf="@+id/tvNombreCon"
+                card_view:layout_constraintStart_toEndOf="@+id/tvFechaCon" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="desde 00e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPrecioCon" android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvHorarioCon" android:layout_marginTop="8dp"
+                card_view:layout_constraintStart_toEndOf="@+id/tvGeneroCon" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="Genero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvGeneroCon" android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvFechaCon"
+                card_view:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" card_view:layout_constraintEnd_toStartOf="@+id/tvPrecioCon"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

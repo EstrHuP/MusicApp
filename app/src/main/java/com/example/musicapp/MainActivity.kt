@@ -15,8 +15,8 @@ import android.util.Log
 import android.view.Menu
 import android.view.TextureView
 import android.view.View
-import com.example.musicapp.adapter.FestivalAdapter
-import com.example.musicapp.model.Festivales
+import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import org.jetbrains.anko.alert
@@ -27,9 +27,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
    // private val text: TextView? = findViewById(R.id.tvPruebaFirebase)
    // private lateinit var database: DatabaseReference
-
-    private lateinit var adapter: FestivalAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,4 +103,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         //intent.putExtra("festival", (view.tag as Festivales))
         //startActivity(intent)
     }
+
+    fun onClickConcierto(view: View){
+        startActivity(Intent(this, ConciertoActivity::class.java))
+    }
+
 }

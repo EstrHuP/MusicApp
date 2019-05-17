@@ -15,6 +15,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ConciertoActivity">
+        </activity>
         <activity android:name=".FestivalActivity">
         </activity>
         <activity android:name=".RegisterActivity">

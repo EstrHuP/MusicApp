@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import com.example.musicapp.utils.Utils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
@@ -29,7 +28,6 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
     private lateinit var dbReference: DatabaseReference
-    private lateinit var Utils : Utils
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,9 +55,9 @@ class RegisterActivity : AppCompatActivity() {
         val password:String = txtPasswordR.text.toString()
 
         //Comprobar campos vacios
-        if (!TextUtils.isEmpty(name) || !TextUtils.isEmpty(email) || !TextUtils.isEmpty(password.trim())){
+        if (!TextUtils.isEmpty(name) || !TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){
             //Comprobar email y contraseña
-           if (password.length < 6 || !Utils.validate(email)){
+           if (!email.contains("@") || password.length < 6){
                 txtEmail.error = "Correo no valido"
                 txtPasswordR.error = "Debe tener mas de 6 caracteres"
                 //Si toodo esta correcto
