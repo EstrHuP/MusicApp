@@ -16,7 +16,7 @@
 
         <TextView
                 android:text="NombreCon"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tvNombreCon" android:textSize="20sp"
                 android:textStyle="bold" card_view:layout_constraintStart_toStartOf="parent"

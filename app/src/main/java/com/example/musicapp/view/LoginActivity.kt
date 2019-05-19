@@ -1,21 +1,16 @@
-package com.example.musicapp
+package com.example.musicapp.view
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
-import android.text.TextUtils
 import android.view.View
 import android.view.Window
-import android.view.WindowManager
 import android.widget.EditText
-import android.widget.Toast
+import com.example.musicapp.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
-
     private lateinit var view: View
     private lateinit var txtPassword: EditText
     private lateinit var txtEmail: EditText
@@ -25,12 +20,9 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // REMOVE TITLE BAR
-        //   requestWindowFeature(Window.FEATURE_NO_TITLE)
-        // SET FULLSCREEN, toda la pantalla completa
-        //   window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        //Quitar el toolbar
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_login)
-
         //Pantalla Completa
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
 
@@ -41,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
 
         //comprobarCampos()
     }
+
 
 //    private fun comprobarCampos(){
 //        val email:String = txtEmail.toString()

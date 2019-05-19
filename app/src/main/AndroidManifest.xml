@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.musicapp">
-    <!-- Permiso Internet -->
-    <uses-permission
-            android:name="android.permission.INTERNET"/> <!-- Permiso añadir contenido a Storage de Firebase -->
-    <uses-permission
-            android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- Permiso de leer contenido de Storage de Firebase -->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
             android:allowBackup="true"
@@ -15,13 +14,15 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ConciertoActivity">
+        <activity android:name=".view.FestivalDetailActivity">
         </activity>
-        <activity android:name=".FestivalActivity">
+        <activity android:name=".view.ConciertoActivity">
         </activity>
-        <activity android:name=".RegisterActivity">
+        <activity android:name=".view.FestivalActivity">
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".view.RegisterActivity">
+        </activity>
+        <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -29,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".view.MainActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

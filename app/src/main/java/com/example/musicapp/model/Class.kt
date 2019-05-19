@@ -1,8 +1,6 @@
 package com.example.musicapp.model
 
 import java.io.Serializable
-import java.util.*
-
 
 data class Usuarios(
     var nombre: String = "",
@@ -12,6 +10,9 @@ data class Usuarios(
 ): Serializable
 
 data class Festivales(
+    var cartel: String = "",
+    var ubicacion:String = "",
+    var icono: String = "",
     var fecha_inicio: String = "",
     var fecha_final: String = "",
     var genero: String = "",
@@ -35,3 +36,4 @@ data class Conciertos(
     var latitud: String = "",
     var longitud: String = ""
 ): Serializable
+

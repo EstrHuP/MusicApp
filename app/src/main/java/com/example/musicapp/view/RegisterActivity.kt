@@ -1,6 +1,5 @@
-package com.example.musicapp
+package com.example.musicapp.view
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -9,13 +8,12 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.example.musicapp.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_register.*
-import kotlinx.android.synthetic.main.nav_header_main.*
-import org.w3c.dom.Text
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -57,7 +55,7 @@ class RegisterActivity : AppCompatActivity() {
         //Comprobar campos vacios
         if (!TextUtils.isEmpty(name) || !TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)){
             //Comprobar email y contraseña
-           if (!email.contains("@") || password.length < 6){
+            if (!email.contains("@") || password.length < 6){
                 txtEmail.error = "Correo no valido"
                 txtPasswordR.error = "Debe tener mas de 6 caracteres"
                 //Si toodo esta correcto
@@ -74,7 +72,7 @@ class RegisterActivity : AppCompatActivity() {
                         }
                     }
                 Toast.makeText(this, "Usuario creado correctamente", Toast.LENGTH_LONG).show()
-               sendEmailVerification()
+                sendEmailVerification()
             }
 
         }else{
@@ -116,8 +114,8 @@ class RegisterActivity : AppCompatActivity() {
     //private fun comprobarMail(){
     //    if (!email.contains("@")){
     //        txtEmail.error = "Correo no valido"
-            //Toast.makeText(this, "Debe poner un correo válido", Toast.LENGTH_SHORT).show()
-     //   }
+    //Toast.makeText(this, "Debe poner un correo válido", Toast.LENGTH_SHORT).show()
+    //   }
     //}
 
     //private fun comprobarPass(){
@@ -164,8 +162,8 @@ class RegisterActivity : AppCompatActivity() {
 //        }
 //    }
 
-    //Cuando se crea un usuario este metodo se va a lanzar cuando este correctamente
-    //Manda al usuario a la vista Login
+//Cuando se crea un usuario este metodo se va a lanzar cuando este correctamente
+//Manda al usuario a la vista Login
 //    private fun action(){
 //        startActivity(Intent(this, LoginActivity::class.java))
 //    }
@@ -181,5 +179,8 @@ class RegisterActivity : AppCompatActivity() {
 //                    Toast.makeText(this, "Error al enviar email", Toast.LENGTH_LONG)
 //                }
 //            }
-//    }
+//    {
+
+
+
 

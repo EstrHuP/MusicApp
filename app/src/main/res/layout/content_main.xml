@@ -6,9 +6,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:background="#CCC6E4"
+        android:background="#D1DEE0"
         tools:showIn="@layout/app_bar_main"
-        tools:context=".MainActivity">
+        tools:context=".view.MainActivity">
 
     <TextView
             android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
     <ImageButton
             android:layout_width="342dp"
             android:background="@drawable/fotofestival"
-            android:onClick="onClickFestival"
+            android:onClick="onClickFestivales"
             android:layout_height="189dp"
             android:id="@+id/btnFestival" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"

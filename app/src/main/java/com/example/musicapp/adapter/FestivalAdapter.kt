@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.musicapp.model.Festivales
 import com.example.musicapp.utils.Utils
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_login.view.*
 import kotlinx.android.synthetic.main.rowfestival.view.*
 
 class FestivalAdapter(val context: Context,
@@ -38,14 +40,12 @@ class FestivalAdapter(val context: Context,
 
     class ViewHolder(viewlayout: View, val context: android.content.Context) : RecyclerView.ViewHolder(viewlayout) {
         fun bind(dataItem: Festivales){
-            // itemview es el item de diseño
-            // al que hay que poner los datos del objeto dataItem
-            //itemView.tvIdFest.text = dataItem.idFest
-            //itemView.tvFechaFest.text = Utils.formatStringDate(dataItem.fecha_inicio)
             itemView.tvNombreFest.text = dataItem.nombre
             itemView.tvPrecioFest.text = "desde ${dataItem.precio}0€"
             itemView.tvGeneroFest.text = dataItem.genero
             itemView.tvFechaFest.text = "${dataItem.fecha_inicio} al ${dataItem.fecha_final} de 2019"//Fecha sin convertidor porque me gusta así
+            itemView.tvUbiFest.text = dataItem.ubicacion
+            Picasso.with(context).load(dataItem.icono).into(itemView.ivFest)
             itemView.tag = dataItem
         }
     }
