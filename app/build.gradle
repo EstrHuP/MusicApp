@@ -61,4 +61,7 @@ dependencies {
     // circleimage
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
+
+    //PhotoView
+    implementation 'com.commit451:PhotoView:1.2.4'
 }

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.Menu
 import android.view.View
+import android.widget.Button
 import android.widget.SearchView
 import com.example.musicapp.R
 import com.example.musicapp.adapter.FestivalAdapter
@@ -14,6 +15,7 @@ import com.example.musicapp.model.Festivales
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_festival.*
+import kotlinx.android.synthetic.main.activity_festival_detail.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
@@ -76,6 +78,14 @@ class FestivalActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         var festival = view.tag as Festivales
         val intent = Intent(this, FestivalDetailActivity::class.java)
         intent.putExtra("festival", festival)
+        startActivity(intent)
+    }
+
+    fun onClickVerMapFest(view: View){
+        //startActivity(Intent(this, FestivalMapsActivity::class.java))
+        var festivalmapa = view.tag as Festivales
+        val intent = Intent(this, FestivalMapsActivity::class.java)
+        intent.putExtra("festivalmapa", festivalmapa)
         startActivity(intent)
     }
 

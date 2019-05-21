@@ -14,4 +14,5 @@
     <string name="mainConciertos">¡Canta como nunca!</string>
 
     <string name="registrate">¿No tienes cuenta?</string>
+    <string name="title_activity_festival_maps">Map</string>
 </resources>
