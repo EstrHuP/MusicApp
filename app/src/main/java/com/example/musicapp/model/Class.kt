@@ -6,12 +6,12 @@ data class Usuarios(
     var nombre: String = "",
     var email: String = "",
     var password: String = "",
-    var favorito:Boolean,
+    //var favorito:Boolean,
     var avatar: String = ""
 ): Serializable
 
 data class Festivales(
-    var favorito: Boolean,
+    //var favorito: Boolean,
     var cartel: String = "",
     var ubicacion:String = "",
     var icono: String = "",
@@ -29,7 +29,7 @@ data class Festivales(
 ): Serializable
 
 data class Conciertos(
-    var favorito: Boolean,
+    //var favorito: Boolean,
     var fecha: String = "",
     var genero: String = "",
     var nombre: String = "",

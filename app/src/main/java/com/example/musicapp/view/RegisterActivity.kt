@@ -90,7 +90,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun sendEmailVerification() {
         // Disable button
-        btnNew.isEnabled = false
+        //btnNew.isEnabled = false
         // Send verification email
         // [START send_email_verification]
         val user = auth.currentUser
