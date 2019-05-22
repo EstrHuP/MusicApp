@@ -34,7 +34,7 @@ class FestivalDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_festival_detail)
 
         festival = intent.getSerializableExtra("festival") as Festivales
-        Log.d("mapa", festival.toString())
+        //Log.d("mapa", festival.toString())
 
         instancias()
         showFestivalPulsado()
