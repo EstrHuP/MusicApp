@@ -17,13 +17,13 @@ import com.google.android.gms.maps.model.MarkerOptions
 class FestivalMapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
-    private lateinit var festivalmapa: Festivales
+    private lateinit var festivalm: Festivales
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_festival_maps)
 
-        festivalmapa = intent.getSerializableExtra("festivalmapa") as Festivales
+        festivalm = intent.getSerializableExtra("festival") as Festivales
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -46,7 +46,7 @@ class FestivalMapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // Add a marker in Sydney and move the camera
         //val sydney = LatLng(-34.0, 151.0)
         //val sydney = LatLng(festivalmapa.latitud.toDouble(), festivalmapa.longitud.toDouble()) //coordenadas del objeto
-        val sydney = LatLng(festivalmapa.latitud.toDouble(), festivalmapa.longitud.toDouble())
+        val sydney = LatLng(festivalm.latitud.toDouble(), festivalm.longitud.toDouble())
         mMap.addMarker(MarkerOptions().position(sydney).title("Fiessssta"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
     }

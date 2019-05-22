@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.SearchView
 import com.example.musicapp.R
 import com.example.musicapp.adapter.FestivalAdapter
@@ -30,6 +31,7 @@ class FestivalActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
     private lateinit var refFestivales: DatabaseReference
     private lateinit var database: FirebaseDatabase
     private lateinit var searchView: SearchView
+//    private var btnUbiFest: ImageButton = findViewById(R.id.btnUbiMapaFest)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,14 +80,6 @@ class FestivalActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         var festival = view.tag as Festivales
         val intent = Intent(this, FestivalDetailActivity::class.java)
         intent.putExtra("festival", festival)
-        startActivity(intent)
-    }
-
-    fun onClickVerMapFest(view: View){
-        //startActivity(Intent(this, FestivalMapsActivity::class.java))
-        var festivalmapa = view.tag as Festivales
-        val intent = Intent(this, FestivalMapsActivity::class.java)
-        intent.putExtra("festivalmapa", festivalmapa)
         startActivity(intent)
     }
 

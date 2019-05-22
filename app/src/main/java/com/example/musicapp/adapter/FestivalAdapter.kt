@@ -45,7 +45,7 @@ class FestivalAdapter(val context: Context,
             itemView.tvGeneroFest.text = dataItem.genero
             itemView.tvFechaFest.text = "${dataItem.fecha_inicio} al ${dataItem.fecha_final} de 2019"//Fecha sin convertidor porque me gusta así
             itemView.tvUbiFest.text = dataItem.ubicacion
-            Picasso.with(context).load(dataItem.icono).into(itemView.ivFest)
+            Picasso.get().load(dataItem.icono).into(itemView.ivFest)
             itemView.tag = dataItem
         }
     }

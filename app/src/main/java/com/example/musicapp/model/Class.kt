@@ -22,7 +22,7 @@ data class Festivales(
     var precio: Float= 0F,
     var puntuacion_media: Int = 0,
     var url_original: String ="",
-    var fotos: List<String> = listOf(""),
+    var fotos: ArrayList<String> = arrayListOf() ,
     var comentarios: String="",
     var latitud: Float = 0f,
     var longitud: Float = 0f
