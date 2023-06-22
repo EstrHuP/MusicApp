@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import com.example.musicapp.R
+
 import com.example.musicapp.model.Festivales
 import com.example.musicapp.model.UbiMapFestival
 import com.google.firebase.database.*
@@ -20,7 +21,8 @@ import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import uk.co.senab.photoview.PhotoViewAttacher
 
-class FestivalDetailActivity : AppCompatActivity() {
+
+class FestivalDetailActivity : AppCompatActivity(){
 
     private lateinit var storage: FirebaseStorage
     private lateinit var database: FirebaseDatabase
@@ -31,7 +33,7 @@ class FestivalDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_festival_detail)
+        setContentView(com.example.musicapp.R.layout.activity_festival_detail)
 
         festival = intent.getSerializableExtra("festival") as Festivales
         //Log.d("mapa", festival.toString())
@@ -45,6 +47,7 @@ class FestivalDetailActivity : AppCompatActivity() {
         mAttacher = PhotoViewAttacher(ivCartel)
 
     }
+
 
     private fun showFestivalPulsado(){
         tvNombreDetailFest.text = festival.nombre
